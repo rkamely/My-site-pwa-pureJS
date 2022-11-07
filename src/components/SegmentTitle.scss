@@ -1,0 +1,23 @@
+@import "../constants/Mixin";
+@import "../constants/Variables";
+
+.SegmentTitle {
+  @include Display(row, space-between, center);
+  width: 90%;
+  margin: auto;
+  border-bottom: $Border;
+  align-self: center;
+
+
+  img {
+    width: 25%;
+  }
+
+  h1 {
+    margin: 0;
+    color: $FontColor;
+    text-align: right;
+
+  }
+
+}

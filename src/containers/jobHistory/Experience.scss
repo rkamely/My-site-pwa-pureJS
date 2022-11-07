@@ -1,0 +1,61 @@
+@import "../../constants/Mixin";
+@import "../../constants/Variables";
+
+.Experience {
+  margin: auto;
+  padding: 25px;
+  width: 90%;
+
+  > h4 {
+    @media only screen and (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+
+  }
+
+  .titlesAndLogo {
+    @include Display(row, space-between, center);
+
+    > div {
+      > * {
+        margin: 5px 0;
+      }
+    }
+
+    img {
+      border-radius: 10%;
+      width: 25%;
+    }
+
+
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  img {
+    width: 20% !important;
+  }
+
+}
+
+.tasksItems {
+
+  > * {
+    margin: 15px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+
+    &:before {
+      content: url("../../assets/right-arrow.png");
+      position: absolute;
+      left: -25px;
+      top: 3px;
+
+    }
+
+  }
+}

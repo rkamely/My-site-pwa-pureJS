@@ -1,0 +1,85 @@
+@import "constants/Mixin";
+@import "constants/Variables";
+
+@font-face {
+  font-family: "LexendDeca-Regular";
+  src: local('LexendDeca-Regular'), url('assets/LexendDeca-Regular.ttf') format('truetype');
+}
+
+.App {
+  background-color: $Background-color;
+  height: auto;
+  overflow: hidden;
+
+  body {
+    font-size: 16px
+  }
+
+  *, :before, :after {
+    box-sizing: border-box;
+    text-decoration: none;
+    direction: ltr;
+    font-family: LexendDeca-Regular;
+    scroll-behavior: smooth;
+    text-align: justify;
+
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    white-space: nowrap;
+    text-align: left;
+
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    text-align: left;
+
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+    text-indent: 15px;
+    line-height: 1.5;
+    word-spacing: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: .9rem;
+    }
+
+    h3 {
+      font-size: .8rem;
+    }
+
+    h4 {
+      font-size: .6rem;
+    }
+    h5 {
+      font-size: .5rem;
+    }
+    p {
+      font-size:1rem;
+    }
+
+  }
+}

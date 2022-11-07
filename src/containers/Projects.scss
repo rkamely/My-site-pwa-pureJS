@@ -1,0 +1,62 @@
+@import "../constants/Mixin";
+@import "../constants/Variables";
+
+.Projects {
+  width: 90%;
+  margin: auto;
+  .projectsContent {
+
+    :nth-child(odd) {
+      flex-direction: row;
+
+    }
+
+    :nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .projectsCard {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      box-shadow: #{$BoxShadow};
+      border-radius: #{$BorderRadius};
+      margin: 30px auto;
+      padding: 30px;
+
+      @media only screen and (max-width: 900px) {
+        @include Display(column, center, center);
+        padding: 20px 0;
+
+
+      }
+
+      > img {
+        width: 35%;
+        @media only screen and (max-width: 768px) {
+          width: 50%!important;
+        }
+      }
+
+      > div {
+        width: 60%;
+        @media only screen and (max-width: 900px) {
+          @include Display(column, center, center);
+          width: 70%;
+
+        }
+        @media only screen and (max-width: 768px) {
+         h3{
+           font-size: 1rem;
+           white-space: nowrap;
+         }
+        }
+        button {
+          margin:  20px 0;
+
+        }
+      }
+    }
+  }
+}

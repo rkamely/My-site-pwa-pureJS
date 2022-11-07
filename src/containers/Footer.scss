@@ -1,0 +1,143 @@
+@import "../constants/Mixin";
+@import "../constants/Variables";
+
+.Footer {
+  margin-top: 50px;
+  padding-top: 85px;
+  height: auto;
+
+  > :nth-child(1) {
+    width: 90%;
+  }
+
+  .contactForm {
+    @include Display(column, flex-start, center);
+    padding-top: 50px;
+
+
+    textarea {
+      width: 60%;
+      margin: 5px auto;
+      padding: 10px;
+      outline: none;
+      border: $Border;
+      height: 300px;
+      border-radius: $BorderRadius;
+      transition: 0.25s linear;
+
+      &:focus {
+        box-shadow: $BoxShadow;
+      }
+
+      & ::placeholder {
+        color: $PlaceholderColor;
+        font-size: 1.5vw;
+        opacity: .8;
+
+      }
+    }
+
+
+  }
+
+  .signature {
+    //background-image: url("../assets/ShinyOverlay.svg");
+    background-color: #000000;
+    background-size: cover;
+    height: 350px;
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+    @media only screen and (max-width: 768px) {
+      height: 500px;
+    }
+    @media only screen and (max-width: 600px) {
+      height: 500px;
+    }
+
+
+    span {
+      color: #{$LightFontColor};
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+    }
+
+    .footerTextContainer {
+      @include Display(row, space-around, flex-start);
+      padding: 20px 10%;
+      @media only screen and (max-width: 600px) {
+        padding: 20px 10px;
+      }
+
+      > img {
+        width: 100px!important;
+        height: 100px!important;
+        @media only screen and (max-width: 768px) {
+          width: 80px!important;
+          height: 80px!important;
+        }
+      }
+
+      .footerText {
+        width: 70%;
+        @include Display(column, center, flex-start);
+        color: #c7c7c7;
+
+        a {
+          color: #FFFFFF;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        * {
+          font-size: 14px;
+          text-indent: 0;
+          margin: 5px 0;
+        }
+      }
+
+      .iconFooter {
+        @include Display(row, center, center);
+        //width: 40%;
+        a {
+          cursor: pointer;
+          text-align: center;
+          width: 20px;
+
+          > * {
+            font-size: 20px !important;
+
+            &:hover {
+              color: #c7c7c7;
+            }
+          }
+
+        }
+
+
+        > * {
+          margin-right: 10px;
+          color: #FFFFFF;
+
+        }
+
+      }
+    }
+
+  }
+}
+
+
+@media only screen and (max-width: 992px) {
+  .contactForm > * {
+    width: 60% !important;
+  }
+
+  textarea {
+    height: 150px !important;
+  }
+}

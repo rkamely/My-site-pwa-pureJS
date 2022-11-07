@@ -1,0 +1,177 @@
+@import "../constants/Mixin";
+@import "../constants/Variables";
+
+.Skills {
+  width: 90%;
+  margin: auto;
+  padding-top: 80px;
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    margin: auto;
+  }
+
+  .skillItems {
+    width: 80%;
+    margin: 50px auto 0 auto;
+
+    h2, h5 {
+      margin: 0 !important;
+    }
+
+
+    .item {
+      @include Display(row-reverse, flex-start, center);
+      background-image: linear-gradient(to left, #d3fbd8, #cdfef6, #ddfeff, #f4fdff, #ffffff);
+      border-radius: 0 90px 90px 0;
+      padding: 0;
+      border: none;
+      position: relative;
+      height: 180px;
+      transform: rotateZ(-1deg);
+
+
+      .shadow {
+        box-shadow: 14px 11px 18px -15px #2d4849;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 1000;
+        position: absolute;
+        width: 91%;
+        height: 100%;
+        border-radius: 0 90px 90px 0;
+        right: 1px;
+      }
+
+      .contentSkills {
+        direction: rtl !important;
+        padding-left: 25px;
+        padding-right: 10px;
+        width: 80%;
+
+        > :nth-child(1) {
+          margin-bottom: 10px;
+          white-space: nowrap;
+
+        }
+
+      }
+
+      .number {
+        @include Display(row, center, center);
+        border-radius: 50%;
+        background-image: linear-gradient(to right, #2b6766, #3d7c7a, #4f928f, #62a9a5, #75c0bb);
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        font-weight: bolder;
+        margin-right: 10px;
+        @media only screen and (max-width: 768px) {
+          width: 60px!important;
+          height: 60px!important;
+        }
+        span {
+          @include Display(row, center, center);
+          width: 130px;
+          height: 130px;
+          border-radius: 50%;
+          background-image: linear-gradient(to left, #2b6766, #3d7c7a, #4f928f, #62a9a5, #75c0bb);
+          font-size: 6vw;
+          color: #FFFFFF;
+          @media only screen and (max-width: 768px) {
+            width: 50px!important;
+            height: 50px!important;
+          }
+        }
+      }
+    }
+
+    .item2 {
+      @include Display(row, flex-start, center);
+      background-image: linear-gradient(to right, #d3fbd8, #cdfef6, #ddfeff, #f4fdff, #ffffff);
+      border-radius: 90px 0 0 90px;
+      padding: 10px 0 !important;
+      position: relative;
+      height: 180px;
+      direction: ltr;
+      transform: rotateZ(1deg);
+
+      .shadow2 {
+        box-shadow: -14px 11px 18px -15px #2d4849;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 1000;
+        position: absolute;
+        width: 91%;
+        height: 100%;
+        border-radius: 90px 0 0 90px;
+        left: 1px;
+
+      }
+
+      .contentSkills {
+        padding-left: 25px;
+        padding-right: 10px;
+
+        width: 80%;
+
+        > h2 {
+          margin-bottom: 10px;
+          white-space: nowrap;
+        }
+
+        > h5 {
+        }
+
+
+      }
+
+      .number2 {
+        @include Display(row, center, center);
+        border-radius: 50%;
+        background-image: linear-gradient(to right, #2b6766, #3d7c7a, #4f928f, #62a9a5, #75c0bb);
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        font-weight: bolder;
+        margin-left: 10px;
+        @media only screen and (max-width: 768px) {
+          width: 60px!important;
+          height: 60px!important;
+        }
+        span {
+          @include Display(row, center, center);
+          width: 130px;
+          height: 130px;
+          border-radius: 50%;
+          background-image: linear-gradient(to left, #2b6766, #3d7c7a, #4f928f, #62a9a5, #75c0bb);
+          font-size: 6vw;
+          color: #FFFFFF;
+          @media only screen and (max-width: 768px) {
+            width: 50px!important;
+            height: 50px!important;
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .number, .number2 {
+    height: 70px !important;
+    width: 70px !important;
+
+    span {
+      width: 60px !important;
+      height: 60px !important;
+      font-size: 4vw !important;
+
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .item, .item2 {
+    height: 80px !important;
+  }
+}

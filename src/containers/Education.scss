@@ -1,0 +1,53 @@
+@import "../constants/Mixin";
+@import "../constants/Variables";
+
+.Education {
+  width: 90%;
+  margin: auto;
+  padding-top: 80px;
+
+  .universities {
+    @include Display(column, center, center);
+    border-radius: $BorderRadius;
+    margin: 20px auto;
+    padding: 40px 70px;
+    box-shadow: $BoxShadow;
+    width: 80%;
+    @media only screen and (max-width: 600px) {
+      padding: 20px;
+      width: 90%;
+
+    }
+  }
+
+  h3, h4, h5, h6 {
+    margin: 5px 0 !important;
+  }
+
+  .descriptions {
+    @include Display(row-reverse, space-between, center);
+    width: 100%;
+
+    > p {
+      margin: 20px auto;
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 100% !important
+
+
+    }
+  }
+
+  .uniLogo {
+    width: 10%;
+    resize: both;
+    margin: 10px;
+
+  }
+}
+
+
+
+
+
